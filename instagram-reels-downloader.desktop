@@ -2,7 +2,7 @@
 Name=Instagram Reels Downloader
 Comment=Download Instagram reels with one click
 Exec=instagram-reels-downloader-gui
-Icon=video-x-generic
+Icon=instagram-reels-downloader
 Terminal=false
 Type=Application
 Categories=Network;Video;AudioVideo;

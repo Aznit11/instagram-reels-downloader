@@ -1,0 +1,16 @@
+pkgbase = instagram-reels-downloader
+	pkgdesc = A beautiful native GTK application for downloading Instagram reels with one click
+	pkgver = 1.0.0
+	pkgrel = 1
+	url = https://github.com/yourusername/instagram-reels-downloader
+	arch = any
+	license = MIT
+	makedepends = python-setuptools
+	depends = python
+	depends = python-gobject
+	depends = gtk3
+	depends = python-pip
+	source = instagram-reels-downloader-1.0.0.tar.gz::https://github.com/yourusername/instagram-reels-downloader/archive/v1.0.0.tar.gz
+	sha256sums = SKIP
+
+pkgname = instagram-reels-downloader

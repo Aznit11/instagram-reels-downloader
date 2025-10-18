@@ -1,0 +1,37 @@
+# Files to Delete (Web Interface)
+
+These files are no longer needed since we're using only the native GTK app:
+
+1. app.py - Flask web application (DELETE)
+2. run.sh - Web app launcher (DELETE)
+3. templates/ - HTML templates directory (DELETE)
+4. README-NATIVE.md - Merged into main README.md (DELETE)
+
+To clean up, run:
+```bash
+rm -f app.py run.sh
+rm -rf templates/
+rm -f README-NATIVE.md
+```
+
+# Files to Keep (Native GTK App)
+
+Core files:
+- instagram_downloader_gui.py - Main application
+- run-gui.sh - GTK app launcher
+- requirements.txt - Python dependencies
+- setup.py - Package installer
+- PKGBUILD - Arch package build script
+- .SRCINFO - AUR metadata
+- LICENSE - MIT license
+- .gitignore - Git ignore rules
+- MANIFEST.in - Package manifest
+
+Documentation:
+- README.md - Main documentation (UPDATED)
+- QUICKSTART.md - Quick start guide (UPDATED)
+- AUR-SUBMISSION-GUIDE.md - Publishing guide
+- QUICK-AUR-GUIDE.md - Quick AUR guide
+
+Desktop integration:
+- instagram-reels-downloader.desktop - Desktop launcher

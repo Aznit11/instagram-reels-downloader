@@ -52,10 +52,9 @@ If the package name is already taken, pick a different `pkgname` (for example
 
 ## Notes
 
-- Runtime dependencies are `python`, `python-gobject`, `gtk4`, `libadwaita`,
-  `yt-dlp` and `ffmpeg`.
-- The source uses the GitHub tag (`git+https://…#tag=v2.0.0`) with
-  `sha256sums=('SKIP')`. VCS sources are allowed to use `SKIP`, but a release
-  tarball with a real checksum is preferable once releases are published on
-  GitHub.
+- Runtime dependencies are `python`, `python-gobject`, `gtk4`,
+  `libadwaita>=1.5`, `yt-dlp` and `ffmpeg`.
+- The source is the GitHub release tarball for the `v2.0.0` tag with a pinned
+  SHA-256 checksum. When releasing a new version, download the new tarball,
+  update `pkgver`/`sha256sums`, and refresh `.SRCINFO`.
 - Keep `pkgver` in `PKGBUILD`, `pyproject.toml` and `ird/__init__.py` in sync.

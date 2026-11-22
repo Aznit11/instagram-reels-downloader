@@ -15,7 +15,7 @@ pkgbase = instagram-reels-downloader
 	depends = libadwaita>=1.5
 	depends = yt-dlp
 	depends = ffmpeg
-	source = instagram-reels-downloader::git+https://github.com/Aznit11/instagram-reels-downloader.git#tag=v2.0.0
-	sha256sums = SKIP
+	source = instagram-reels-downloader-2.0.0.tar.gz::https://github.com/Aznit11/instagram-reels-downloader/archive/v2.0.0.tar.gz
+	sha256sums = c647485d9cf5fc0a7be427525b9f46dc131a8b6353d53f978a41cd4921222684
 
 pkgname = instagram-reels-downloader

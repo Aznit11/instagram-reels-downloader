@@ -1,10 +1,14 @@
 venv/
+.venv/
 __pycache__/
 *.pyc
 *.pyo
 *.egg-info/
 dist/
 build/
+*.whl
+.pytest_cache/
 .DS_Store
 *.swp
 *.swo
+cookies.txt

@@ -1,45 +1,24 @@
-# Maintainer: Your Name <your.email@example.com>
+# Maintainer: Aznit11 <admin@movies-hood.com>
 pkgname=instagram-reels-downloader
-pkgver=1.0.0
+pkgver=2.0.0
 pkgrel=1
-pkgdesc="A beautiful native GTK application for downloading Instagram reels with one click"
+pkgdesc="Fast, modern GTK4 application for downloading Instagram reels"
 arch=('any')
-url="https://github.com/AZNIT11/instagram-reels-downloader"
+url="https://github.com/Aznit11/instagram-reels-downloader"
 license=('MIT')
-depends=('python' 'python-gobject' 'gtk3' 'python-pip')
-makedepends=('python-setuptools')
-source=("${pkgname}-${pkgver}.tar.gz::https://github.com/AZNIT11/${pkgname}/archive/v${pkgver}.tar.gz")
-sha256sums=('d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed  -
-')  # Replace with actual checksum after uploading to GitHub
-
-prepare() {
-    cd "${srcdir}/${pkgname}-${pkgver}"
-}
+depends=('python' 'python-gobject' 'gtk4' 'libadwaita>=1.5' 'yt-dlp' 'ffmpeg')
+makedepends=('python-build' 'python-installer' 'python-wheel' 'python-setuptools')
+source=("${pkgname}::git+https://github.com/Aznit11/${pkgname}.git#tag=v${pkgver}")
+sha256sums=('SKIP')
 
 build() {
-    cd "${srcdir}/${pkgname}-${pkgver}"
-    python setup.py build
+  cd "${pkgname}"
+  python -m build --wheel --no-isolation
 }
 
 package() {
-    cd "${srcdir}/${pkgname}-${pkgver}"
-    
-    # Install Python application
-    python setup.py install --root="${pkgdir}" --optimize=1 --skip-build
-    
-    # Install desktop file
-    install -Dm644 instagram-reels-downloader.desktop \
-        "${pkgdir}/usr/share/applications/instagram-reels-downloader.desktop"
-    
-    # Install icon
-    install -Dm644 icon.png \
-        "${pkgdir}/usr/share/pixmaps/instagram-reels-downloader.png"
-    
-    # Install documentation
-    install -Dm644 README-NATIVE.md \
-        "${pkgdir}/usr/share/doc/${pkgname}/README.md"
-    
-    # Install license
-    install -Dm644 LICENSE \
-        "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+  cd "${pkgname}"
+  python -m installer --destdir="${pkgdir}" dist/*.whl
+  install -Dm644 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+  install -Dm644 README.md "${pkgdir}/usr/share/doc/${pkgname}/README.md"
 }

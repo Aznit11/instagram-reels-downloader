@@ -1,5 +1,7 @@
 include README.md
 include LICENSE
-include instagram-reels-downloader.desktop
+include io.github.aznit11.InstagramReelsDownloader.desktop
+include instagram-reels-downloader.svg
 include requirements.txt
-recursive-include docs *
+recursive-include tests *.py
+recursive-include ird *.py *.css

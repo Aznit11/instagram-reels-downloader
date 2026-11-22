@@ -1,2 +1,7 @@
-PyGObject==3.48.2
-yt-dlp==2024.8.6
+# The app runs against the system yt-dlp executable and GTK/PyGObject.
+# On most distributions install these from the package manager instead:
+#   Arch:   sudo pacman -S python-gobject gtk4 libadwaita yt-dlp ffmpeg
+#   Debian: sudo apt install python3-gi gir1.2-gtk-4.0 gir1.2-adw-1 yt-dlp ffmpeg
+#   Fedora: sudo dnf install python3-gobject gtk4 libadwaita yt-dlp ffmpeg
+PyGObject>=3.42
+yt-dlp>=2024.8.6

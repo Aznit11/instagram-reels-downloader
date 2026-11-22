@@ -1,0 +1,14 @@
+[Desktop Entry]
+Name=Instagram Reels Downloader
+GenericName=Reels Downloader
+Comment=Download Instagram reels with a fast, modern interface
+Exec=instagram-reels-downloader %U
+TryExec=instagram-reels-downloader
+Icon=instagram-reels-downloader
+Terminal=false
+Type=Application
+Categories=Network;Video;AudioVideo;
+Keywords=instagram;reels;download;video;social;
+StartupNotify=true
+StartupWMClass=io.github.aznit11.InstagramReelsDownloader
+X-GNOME-UsesNotifications=true
